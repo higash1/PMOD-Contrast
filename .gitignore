@@ -8,3 +8,5 @@ logs/
 results/
 .vscode/
 *_backup/
+
+.history
