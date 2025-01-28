@@ -43,7 +43,7 @@
 
 ### Prepare Static Camera Image
 
-1. See this [IOPaint](http://tfsv.tasakilab:5051/git/higashi/IOPaint.git)
+1. See this [IOPaint](https://github.com/higash1/IOPaint)
 
 ## Start a Docker Container
 

@@ -41,7 +41,7 @@
 
 ### 静的カメラ画像の準備
 
-1. [このリンク](http://tfsv.tasakilab:5051/git/higashi/IOPaint.git)
+1. [このリンク](https://github.com/higash1/IOPaint)
 
 ## Dockerコンテナの起動
 
