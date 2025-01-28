@@ -1,0 +1,788 @@
+{
+    "file_path": "/workspace/hdf5/Town01_ClearNoon_4649.h5",
+    "mini-batch": {
+      "camera": {
+        "type": "bgr8",
+        "frame-id": "front",
+        "from": {
+          "bgr8": "sensor.camera.rgb-front"
+        },
+        "shape": [
+          256,
+          512,
+          3
+        ],
+        "normalize": false,
+        "range": [
+          0,
+          255
+        ],
+        "label-tag": ""
+      },
+      "iopaint": {
+        "type": "bgr8",
+        "frame-id": "cam0",
+        "from": {
+          "bgr8": "iopaintimg"
+        },
+        "shape": [
+          256,
+          512,
+          3
+        ],
+        "normalize": false,
+        "range": [
+          0,
+          255
+        ],
+        "label-tag": ""
+      },
+      "label": {
+        "type": "semantic2d",
+        "frame-id": "front",
+        "from": {
+          "semantic2d": "sensor.camera.semantic_segmentation-front"
+        },
+        "shape": [
+          256,
+          512
+        ],
+        "normalize": false,
+        "range": null,
+        "label-tag": "carla-0.9.14"
+      },
+      "map": {
+        "type": "depth",
+        "frame-id": "front",
+        "from": {
+          "voxel-points": "/map/map",
+          "pose": "map",
+          "intrinsic": "/intrinsic/sensor.camera.rgb-front"
+        },
+        "shape": [
+          256,
+          512
+        ],
+        "normalize": true,
+        "range": [
+          0.0,
+          80.0
+        ],
+        "label-tag": ""
+      },
+      "depth": {
+        "type": "depth",
+        "frame-id": "front",
+        "from": {
+          "depth": "sensor.camera.depth-front"
+        },
+        "shape": [
+          256,
+          512
+        ],
+        "normalize": true,
+        "range": [
+          0.0,
+          80.0
+        ],
+        "label-tag": ""
+      },
+      "intrinsic": {
+        "type": "intrinsic",
+        "frame-id": "front",
+        "from": {
+          "intrinsic": "/intrinsic/sensor.camera.depth-front"
+        },
+        "shape": [
+          256,
+          512
+        ],
+        "label-tag": ""
+      }
+    },
+    "src-data": {
+      "map2hero": {
+        "tag": "map2hero",
+        "type": "pose",
+        "shape": null,
+        "frame-id": "map",
+        "child-frame-id": "hero",
+        "label-tag": null
+      },
+      "map2hero/rotation": {
+        "tag": "map2hero/rotation",
+        "type": "quaternion",
+        "shape": [
+          4
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "map2hero/translation": {
+        "tag": "map2hero/translation",
+        "type": "translation",
+        "shape": [
+          3
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "sensor.camera.depth-front": {
+        "tag": "sensor.camera.depth-front",
+        "type": "depth",
+        "shape": [
+          600,
+          800
+        ],
+        "frame-id": "hero",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "sensor.camera.rgb-front": {
+        "tag": "sensor.camera.rgb-front",
+        "type": "bgr8",
+        "shape": [
+          600,
+          800,
+          3
+        ],
+        "frame-id": "hero",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "sensor.camera.rgb-view": {
+        "tag": "sensor.camera.rgb-view",
+        "type": "bgr8",
+        "shape": [
+          600,
+          800,
+          3
+        ],
+        "frame-id": "hero",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "sensor.camera.semantic_segmentation-front": {
+        "tag": "sensor.camera.semantic_segmentation-front",
+        "type": "semantic2d",
+        "shape": [
+          600,
+          800
+        ],
+        "frame-id": "hero",
+        "child-frame-id": null,
+        "label-tag": "carla-0.9.14"
+      },
+      "sensor.lidar.ray_cast-lidar1": {
+        "tag": "sensor.lidar.ray_cast-lidar1",
+        "type": "points",
+        "shape": [
+          1266,
+          3
+        ],
+        "frame-id": "hero",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "sensor.lidar.ray_cast_semantic-lidar1": {
+        "tag": "sensor.lidar.ray_cast_semantic-lidar1",
+        "type": "semantic3d",
+        "shape": null,
+        "frame-id": "hero",
+        "child-frame-id": null,
+        "label-tag": "carla-0.9.14"
+      },
+      "sensor.lidar.ray_cast_semantic-lidar1/points": {
+        "tag": "sensor.lidar.ray_cast_semantic-lidar1/points",
+        "type": "points",
+        "shape": [
+          2293,
+          3
+        ],
+        "frame-id": "hero",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "sensor.lidar.ray_cast_semantic-lidar1/semantic1d": {
+        "tag": "sensor.lidar.ray_cast_semantic-lidar1/semantic1d",
+        "type": "semantic1d",
+        "shape": [
+          2293
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": "carla-0.9.14"
+      },
+      "/intrinsic/sensor.camera.depth-front": {
+        "tag": "/intrinsic/sensor.camera.depth-front",
+        "type": "intrinsic",
+        "shape": null,
+        "frame-id": "front",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/intrinsic/sensor.camera.rgb-front": {
+        "tag": "/intrinsic/sensor.camera.rgb-front",
+        "type": "intrinsic",
+        "shape": null,
+        "frame-id": "front",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/intrinsic/sensor.camera.rgb-view": {
+        "tag": "/intrinsic/sensor.camera.rgb-view",
+        "type": "intrinsic",
+        "shape": null,
+        "frame-id": "view",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/intrinsic/sensor.camera.semantic_segmentation-front": {
+        "tag": "/intrinsic/sensor.camera.semantic_segmentation-front",
+        "type": "intrinsic",
+        "shape": null,
+        "frame-id": "front",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/map/map": {
+        "tag": "/map/map",
+        "type": "voxel-points",
+        "shape": [
+          6,
+          46,
+          56
+        ],
+        "frame-id": "map",
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/tf_static/hero2front": {
+        "tag": "/tf_static/hero2front",
+        "type": "pose",
+        "shape": null,
+        "frame-id": "hero",
+        "child-frame-id": "front",
+        "label-tag": null
+      },
+      "/tf_static/hero2front/rotation": {
+        "tag": "/tf_static/hero2front/rotation",
+        "type": "quaternion",
+        "shape": [
+          4
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/tf_static/hero2front/translation": {
+        "tag": "/tf_static/hero2front/translation",
+        "type": "translation",
+        "shape": [
+          3
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/tf_static/hero2lidar1": {
+        "tag": "/tf_static/hero2lidar1",
+        "type": "pose",
+        "shape": null,
+        "frame-id": "hero",
+        "child-frame-id": "lidar1",
+        "label-tag": null
+      },
+      "/tf_static/hero2lidar1/rotation": {
+        "tag": "/tf_static/hero2lidar1/rotation",
+        "type": "quaternion",
+        "shape": [
+          4
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/tf_static/hero2lidar1/translation": {
+        "tag": "/tf_static/hero2lidar1/translation",
+        "type": "translation",
+        "shape": [
+          3
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/tf_static/hero2view": {
+        "tag": "/tf_static/hero2view",
+        "type": "pose",
+        "shape": null,
+        "frame-id": "hero",
+        "child-frame-id": "view",
+        "label-tag": null
+      },
+      "/tf_static/hero2view/rotation": {
+        "tag": "/tf_static/hero2view/rotation",
+        "type": "quaternion",
+        "shape": [
+          4
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      },
+      "/tf_static/hero2view/translation": {
+        "tag": "/tf_static/hero2view/translation",
+        "type": "translation",
+        "shape": [
+          3
+        ],
+        "frame-id": null,
+        "child-frame-id": null,
+        "label-tag": null
+      }
+    },
+    "tf": {
+      "tree": {
+        "map": {
+          "hero": {
+            "front": {},
+            "lidar1": {},
+            "view": {}
+          }
+        }
+      },
+      "list": [
+        "front",
+        "view",
+        "lidar1",
+        "map",
+        "hero"
+      ],
+      "data": {
+        "hero": {
+          "key": "map2hero",
+          "frame-id": "map",
+          "child-frame-id": "hero"
+        },
+        "front": {
+          "key": "/tf_static/hero2front",
+          "frame-id": "hero",
+          "child-frame-id": "front"
+        },
+        "lidar1": {
+          "key": "/tf_static/hero2lidar1",
+          "frame-id": "hero",
+          "child-frame-id": "lidar1"
+        },
+        "view": {
+          "key": "/tf_static/hero2view",
+          "frame-id": "hero",
+          "child-frame-id": "view"
+        }
+      }
+    },
+    "label": {
+      "src": {
+        "carla-0.9.14": {
+          "0": {
+            "tag": "Unlabeled",
+            "color":[
+              0,
+              0,
+              0
+          ]
+        },
+        "1": {
+            "tag": "Road",
+            "color":[
+              128,
+              64,
+              128
+          ]
+        },
+        "2": {
+            "tag": "SideWalk",
+            "color":[
+              244,
+              35,
+              232
+          ]
+        },
+        "3": {
+            "tag": "Building",
+            "color":[
+              70,
+              70,
+              70
+          ]
+        },
+        "4": {
+            "tag": "Wall",
+            "color":[
+              102,
+              102,
+              156
+          ]
+        },
+        "5": {
+            "tag": "Fence",
+            "color":[
+              100,
+              40,
+              40
+          ]
+        },
+        "6": {
+            "tag": "Pole",
+            "color":[
+              153,
+              153,
+              153
+          ]
+        },
+        "7": {
+            "tag": "TrafficLight",
+            "color":[
+              250,
+              170,
+              30
+          ]
+        },
+        "8": {
+            "tag": "TrafficSign",
+            "color":[
+              220,
+              220,
+              0
+          ]
+        },
+        "9": {
+            "tag": "Vegetation",
+            "color":[
+              107,
+              142,
+              35
+          ]
+        },
+        "10": {
+            "tag": "Terrain",
+            "color":[
+              145,
+              170,
+              100
+          ]
+        },
+        "11": {
+            "tag": "Sky",
+            "color":[
+              70,
+              130,
+              80
+          ]
+        },
+        "12": {
+            "tag": "Pedestrian",
+            "color":[
+              220,
+              20,
+              60
+          ]
+        },
+        "13": {
+            "tag": "Rider",
+            "color":[
+              255,
+              0,
+              0
+          ]
+        },
+        "14": {
+            "tag": "Car",
+            "color":[
+              0,
+              0,
+              142
+          ]
+        },
+        "15": {
+            "tag": "Truck",
+            "color":[
+              0,
+              0,
+              70
+          ]
+        },
+        "16": {
+            "tag": "Bus",
+            "color":[
+              0,
+              60,
+              100
+          ]
+        },
+        "17": {
+            "tag": "Train",
+            "color":[
+              0,
+              80,
+              100
+          ]
+        },
+        "18": {
+            "tag": "Motorcycle",
+            "color":[
+              0,
+              0,
+              230
+          ]
+        },
+        "19": {
+            "tag": "Bicycle",
+            "color":[
+              119,
+              11,
+              32
+          ]
+        },
+        "20": {
+            "tag": "Static",
+            "color":[
+              110,
+              190,
+              160
+          ]
+        },
+        "21": {
+            "tag": "Dynamic",
+            "color":[
+              170,
+              120,
+              50
+          ]
+        },
+        "22": {
+            "tag": "Other",
+            "color":[
+               55,
+               90,
+              80
+          ]
+        },
+        "23": {
+            "tag": "Water",
+            "color":[
+               45,
+               60,
+              150
+          ]
+        },
+        "24": {
+            "tag": "RoadLine",
+            "color":[
+              157,
+              234,
+              50
+          ]
+        },
+        "25": {
+            "tag": "Ground",
+            "color":[
+               81,
+                0,
+              81
+          ]
+        },
+        "26": {
+            "tag": "Bridge",
+            "color":[
+              150,
+              100,
+              100
+          ]
+        },
+        "27": {
+            "tag": "RailTrack",
+            "color":[
+              230,
+              150,
+              140
+          ]
+        },
+        "28": {
+            "tag": "GuardRail",
+            "color":[
+              180,
+              165,
+              180
+           ]
+        }
+        }
+      },
+      "config": {
+        "carla-0.9.14": {
+          "src": "carla-0.9.14",
+          "convert": {
+            "0": 0,
+            "1": 7,
+            "10": 3,
+            "11": 13,
+            "12": 4,
+            "13": 4,
+            "14": 10,
+            "15": 10,
+            "16": 10,
+            "17": 10,
+            "18": 10,
+            "19": 10,
+            "2": 8,
+            "20": 1,
+            "21": 10,
+            "22": 3,
+            "3": 1,
+            "4": 11,
+            "5": 2,
+            "6": 5,
+            "7": 14,
+            "8": 12,
+            "9": 9,
+            "23": 3,
+            "24": 6,
+            "25": 3,
+            "26": 1,
+            "27": 7,
+            "28": 11
+          },
+          "dst": {
+            "0": {
+              "tag": "Unlabeled",
+              "color": [
+                0,
+                0,
+                0
+              ]
+            },
+            "1": {
+              "tag": "Building",
+              "color": [
+                70,
+                70,
+                70
+              ]
+            },
+            "2": {
+              "tag": "Fence",
+              "color": [
+                40,
+                40,
+                100
+              ]
+            },
+            "3": {
+              "tag": "Other",
+              "color": [
+                80,
+                90,
+                55
+              ]
+            },
+            "4": {
+              "tag": "Pedestrian",
+              "color": [
+                60,
+                20,
+                220
+              ]
+            },
+            "5": {
+              "tag": "Pole",
+              "color": [
+                153,
+                153,
+                153
+              ]
+            },
+            "6": {
+              "tag": "RoadLine",
+              "color": [
+                50,
+                234,
+                157
+              ]
+            },
+            "7": {
+              "tag": "Road",
+              "color": [
+                128,
+                64,
+                128
+              ]
+            },
+            "8": {
+              "tag": "SideWalk",
+              "color": [
+                232,
+                35,
+                244
+              ]
+            },
+            "9": {
+              "tag": "Vegetation",
+              "color": [
+                35,
+                142,
+                107
+              ]
+            },
+            "10": {
+              "tag": "Vehicles",
+              "color": [
+                142,
+                0,
+                0
+              ]
+            },
+            "11": {
+              "tag": "Wall",
+              "color": [
+                156,
+                102,
+                102
+              ]
+            },
+            "12": {
+              "tag": "TrafficSign",
+              "color": [
+                0,
+                220,
+                220
+              ]
+            },
+            "13": {
+              "tag": "Sky",
+              "color": [
+                180,
+                130,
+                70
+              ]
+            },
+            "14": {
+              "tag": "TrafficLight",
+              "color": [
+                30,
+                170,
+                250
+              ]
+            }
+          },
+          "dynamic_label":{
+            "list": [4, 
+                     10
+                    ]
+          }
+        }
+      }
+    }
+  }

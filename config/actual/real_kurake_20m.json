@@ -1,0 +1,510 @@
+{
+  "file_path": "/home/kurake/h5_megarover/actual/cross1.hdf5",
+  "mini-batch": {
+    "depth": {
+      "type": "depth",
+      "frame-id": "zed_left_camera_optical_frame",
+      "from": {
+        "depth": "zed_depth"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": true,
+      "range": [
+        0.0,
+        20.0
+      ],
+      "label-tag": ""
+    },
+    "map": {
+      "type": "depth",
+      "frame-id": "zed_left_camera_optical_frame",
+      "from": {
+        "points": "/map/wo_obs",
+        "pose": "map",
+        "intrinsic": "/K/camera"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": true,
+      "range": [
+        0.0,
+        20.0
+      ],
+      "label-tag": ""
+    },
+    "label": {
+      "type": "semantic2d",
+      "frame-id": "zed_left_camera_optical_frame",
+      "from": {
+        "semantic2d": "label"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": false,
+      "range": null,
+      "label-tag": "label"
+    },
+    "camera": {
+      "type": "bgr8",
+      "frame-id": "zed_left_camera_optical_frame",
+      "from": {
+        "bgr8": "zed_rgb"
+      },
+      "shape": [
+        256,
+        512,
+        3
+      ],
+      "normalize": true,
+      "range": [
+        0,
+        255
+      ],
+      "label-tag": ""
+    }
+  },
+  "src-data": {
+    "label": {
+      "tag": "label",
+      "type": "semantic2d",
+      "shape": [
+        540,
+        960
+      ],
+      "frame-id": "zed_left_camera_optical_frame",
+      "child-frame-id": null,
+      "label-tag": "label"
+    },
+    "map2baselink": {
+      "tag": "map2baselink",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "map",
+      "child-frame-id": "base_link",
+      "label-tag": null
+    },
+    "map2baselink/rotation": {
+      "tag": "map2baselink/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "map2baselink/translation": {
+      "tag": "map2baselink/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "velodyne": {
+      "tag": "velodyne",
+      "type": "points",
+      "shape": [
+        518400,
+        3
+      ],
+      "frame-id": "velodyne",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "zed_depth": {
+      "tag": "zed_depth",
+      "type": "depth",
+      "shape": [
+        540,
+        960
+      ],
+      "frame-id": "zed_left_camera_optical_frame",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "zed_rgb": {
+      "tag": "zed_rgb",
+      "type": "bgr8",
+      "shape": [
+        540,
+        960,
+        3
+      ],
+      "frame-id": "zed_left_camera_optical_frame",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/K/camera": {
+      "tag": "/K/camera",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "camera",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/map/w_obs": {
+      "tag": "/map/w_obs",
+      "type": "points",
+      "shape": [
+        25793,
+        3
+      ],
+      "frame-id": "map",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/map/wo_obs": {
+      "tag": "/map/wo_obs",
+      "type": "points",
+      "shape": [
+        2731002,
+        3
+      ],
+      "frame-id": "map",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/velodyne": {
+      "tag": "/tf_static/velodyne",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "base_link",
+      "child-frame-id": "velodyne",
+      "label-tag": null
+    },
+    "/tf_static/velodyne/rotation": {
+      "tag": "/tf_static/velodyne/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/velodyne/translation": {
+      "tag": "/tf_static/velodyne/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_camera_center_joint": {
+      "tag": "/tf_static/zed_camera_center_joint",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "base_link",
+      "child-frame-id": "zed_camera_center",
+      "label-tag": null
+    },
+    "/tf_static/zed_camera_center_joint/rotation": {
+      "tag": "/tf_static/zed_camera_center_joint/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_camera_center_joint/translation": {
+      "tag": "/tf_static/zed_camera_center_joint/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_left_camera_joint": {
+      "tag": "/tf_static/zed_left_camera_joint",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "zed_camera_center",
+      "child-frame-id": "zed_left_camera_frame",
+      "label-tag": null
+    },
+    "/tf_static/zed_left_camera_joint/rotation": {
+      "tag": "/tf_static/zed_left_camera_joint/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_left_camera_joint/translation": {
+      "tag": "/tf_static/zed_left_camera_joint/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_left_camera_optical_joint": {
+      "tag": "/tf_static/zed_left_camera_optical_joint",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "zed_left_camera_frame",
+      "child-frame-id": "zed_left_camera_optical_frame",
+      "label-tag": null
+    },
+    "/tf_static/zed_left_camera_optical_joint/rotation": {
+      "tag": "/tf_static/zed_left_camera_optical_joint/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_left_camera_optical_joint/translation": {
+      "tag": "/tf_static/zed_left_camera_optical_joint/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_right_camera_joint": {
+      "tag": "/tf_static/zed_right_camera_joint",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "zed_camera_center",
+      "child-frame-id": "zed_right_camera_frame",
+      "label-tag": null
+    },
+    "/tf_static/zed_right_camera_joint/rotation": {
+      "tag": "/tf_static/zed_right_camera_joint/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_right_camera_joint/translation": {
+      "tag": "/tf_static/zed_right_camera_joint/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_right_camera_optical_joint": {
+      "tag": "/tf_static/zed_right_camera_optical_joint",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "zed_right_camera_frame",
+      "child-frame-id": "zed_right_camera_optical_frame",
+      "label-tag": null
+    },
+    "/tf_static/zed_right_camera_optical_joint/rotation": {
+      "tag": "/tf_static/zed_right_camera_optical_joint/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/zed_right_camera_optical_joint/translation": {
+      "tag": "/tf_static/zed_right_camera_optical_joint/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    }
+  },
+  "tf": {
+    "tree": {
+      "map": {
+        "base_link": {
+          "velodyne": {},
+          "zed_camera_center": {
+            "zed_left_camera_frame": {
+              "zed_left_camera_optical_frame": {}
+            },
+            "zed_right_camera_frame": {
+              "zed_right_camera_optical_frame": {}
+            }
+          }
+        }
+      }
+    },
+    "list": [
+      "map",
+      "zed_camera_center",
+      "zed_left_camera_frame",
+      "base_link",
+      "zed_right_camera_optical_frame",
+      "zed_left_camera_optical_frame",
+      "zed_right_camera_frame",
+      "velodyne"
+    ],
+    "data": {
+      "base_link": {
+        "key": "map2baselink",
+        "frame-id": "map",
+        "child-frame-id": "base_link"
+      },
+      "velodyne": {
+        "key": "/tf_static/velodyne",
+        "frame-id": "base_link",
+        "child-frame-id": "velodyne"
+      },
+      "zed_camera_center": {
+        "key": "/tf_static/zed_camera_center_joint",
+        "frame-id": "base_link",
+        "child-frame-id": "zed_camera_center"
+      },
+      "zed_left_camera_frame": {
+        "key": "/tf_static/zed_left_camera_joint",
+        "frame-id": "zed_camera_center",
+        "child-frame-id": "zed_left_camera_frame"
+      },
+      "zed_left_camera_optical_frame": {
+        "key": "/tf_static/zed_left_camera_optical_joint",
+        "frame-id": "zed_left_camera_frame",
+        "child-frame-id": "zed_left_camera_optical_frame"
+      },
+      "zed_right_camera_frame": {
+        "key": "/tf_static/zed_right_camera_joint",
+        "frame-id": "zed_camera_center",
+        "child-frame-id": "zed_right_camera_frame"
+      },
+      "zed_right_camera_optical_frame": {
+        "key": "/tf_static/zed_right_camera_optical_joint",
+        "frame-id": "zed_right_camera_frame",
+        "child-frame-id": "zed_right_camera_optical_frame"
+      }
+    }
+  },
+  "label": {
+    "src": {
+      "label": {
+        "0": {
+          "tag": "Void",
+          "color": [
+            0,
+            0,
+            0
+          ]
+        },
+        "1": {
+          "tag": "Ground",
+          "color": [
+            180,
+            130,
+            70
+          ]
+        },
+        "2": {
+          "tag": "Obstacle",
+          "color": [
+            70,
+            70,
+            70
+          ]
+        },
+        "3": {
+          "tag": "Vehicle",
+          "color": [
+            142,
+            0,
+            0
+          ]
+        },
+        "4": {
+          "tag": "Person",
+          "color": [
+            60,
+            20,
+            220
+          ]
+        }
+      }
+    },
+    "config": {
+      "label": {
+        "src": "label",
+        "convert": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3,
+          "4": 4
+        },
+        "dst": {
+          "0": {
+            "tag": "Void",
+            "color": [
+              0,
+              0,
+              0
+            ]
+          },
+          "1": {
+            "tag": "Ground",
+            "color": [
+              180,
+              130,
+              70
+            ]
+          },
+          "2": {
+            "tag": "Obstacle",
+            "color": [
+              70,
+              70,
+              70
+            ]
+          },
+          "3": {
+            "tag": "Vehicle",
+            "color": [
+              142,
+              0,
+              0
+            ]
+          },
+          "4": {
+            "tag": "Person",
+            "color": [
+              60,
+              20,
+              220
+            ]
+          }
+        }
+      }
+    }
+  }
+}

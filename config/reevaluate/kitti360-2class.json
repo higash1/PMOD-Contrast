@@ -1,0 +1,756 @@
+{
+  "file_path": "/data/hdf5/kitti360_seq00.hdf5",
+  "mini-batch": {
+    "map": {
+      "type": "depth",
+      "frame-id": "cam0",
+      "from": {
+        "voxel-semantic3d": "/map/map",
+        "pose": "world",
+        "intrinsic": "/intrinsic/image_00"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": true,
+      "range": [
+        0.0,
+        80.0
+      ],
+      "label-tag": "5class"
+    },
+    "label": {
+      "type": "semantic2d",
+      "frame-id": "cam0",
+      "from": {
+        "semantic2d": "semantic"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": false,
+      "range": null,
+      "label-tag": "5class"
+    },
+    "depth": {
+      "type": "depth",
+      "frame-id": "cam0",
+      "from": {
+        "points": "velodyne_points",
+        "pose": "velodyne",
+        "intrinsic": "/intrinsic/image_00"
+      },
+      "shape": [
+        256,
+        512
+      ],
+      "normalize": true,
+      "range": [
+        0.0,
+        80.0
+      ],
+      "label-tag": ""
+    },
+    "camera": {
+      "type": "bgr8",
+      "frame-id": "cam0",
+      "from": {
+        "bgr8": "image_00"
+      },
+      "shape": [
+        256,
+        512,
+        3
+      ],
+      "normalize": true,
+      "range": [
+        0,
+        255
+      ],
+      "label-tag": ""
+    },
+    "pose_err": {
+      "type": "pose",
+      "frame-id": "cam0",
+      "from": {
+        "pose": "oxts_cam0"
+      },
+      "shape": [],
+      "normalize": false,
+      "range": null,
+      "label-tag": ""
+    }
+  },
+  "src-data": {
+    "image_00": {
+      "tag": "image_00",
+      "type": "bgr8",
+      "shape": [
+        376,
+        1408,
+        3
+      ],
+      "frame-id": "cam0",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "image_01": {
+      "tag": "image_01",
+      "type": "bgr8",
+      "shape": [
+        376,
+        1408,
+        3
+      ],
+      "frame-id": "cam1",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "oxts": {
+      "tag": "oxts",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "world",
+      "child-frame-id": "oxts_pose",
+      "label-tag": null
+    },
+    "oxts/rotation": {
+      "tag": "oxts/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "oxts/translation": {
+      "tag": "oxts/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "semantic": {
+      "tag": "semantic",
+      "type": "semantic2d",
+      "shape": [
+        376,
+        1408
+      ],
+      "frame-id": "cam0",
+      "child-frame-id": null,
+      "label-tag": "kitti360"
+    },
+    "sick_points": {
+      "tag": "sick_points",
+      "type": "points",
+      "shape": [
+        90,
+        3
+      ],
+      "frame-id": "sick",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "velodyne_points": {
+      "tag": "velodyne_points",
+      "type": "points",
+      "shape": [
+        108420,
+        3
+      ],
+      "frame-id": "velodyne",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "world_to_pose": {
+      "tag": "world_to_pose",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "world",
+      "child-frame-id": "pose",
+      "label-tag": null
+    },
+    "world_to_pose/rotation": {
+      "tag": "world_to_pose/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "world_to_pose/translation": {
+      "tag": "world_to_pose/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/image_00": {
+      "tag": "/intrinsic/image_00",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "cam0",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/intrinsic/image_01": {
+      "tag": "/intrinsic/image_01",
+      "type": "intrinsic",
+      "shape": null,
+      "frame-id": "cam1",
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/map/map": {
+      "tag": "/map/map",
+      "type": "voxel-semantic3d",
+      "shape": [
+        4,
+        108,
+        74
+      ],
+      "frame-id": "world",
+      "child-frame-id": null,
+      "label-tag": "kitti360"
+    },
+    "/tf_static/cam0_to_velo": {
+      "tag": "/tf_static/cam0_to_velo",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "cam0",
+      "child-frame-id": "velodyne",
+      "label-tag": null
+    },
+    "/tf_static/cam0_to_velo/rotation": {
+      "tag": "/tf_static/cam0_to_velo/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/cam0_to_velo/translation": {
+      "tag": "/tf_static/cam0_to_velo/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_cam0_to_velo": {
+      "tag": "/tf_static/oxts_cam0_to_velo",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "oxts_cam0",
+      "child-frame-id": "oxts_velodyne",
+      "label-tag": null
+    },
+    "/tf_static/oxts_cam0_to_velo/rotation": {
+      "tag": "/tf_static/oxts_cam0_to_velo/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_cam0_to_velo/translation": {
+      "tag": "/tf_static/oxts_cam0_to_velo/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam0": {
+      "tag": "/tf_static/oxts_pose_to_cam0",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "oxts_pose",
+      "child-frame-id": "oxts_cam0",
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam0/rotation": {
+      "tag": "/tf_static/oxts_pose_to_cam0/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam0/translation": {
+      "tag": "/tf_static/oxts_pose_to_cam0/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam1": {
+      "tag": "/tf_static/oxts_pose_to_cam1",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "oxts_pose",
+      "child-frame-id": "oxts_cam1",
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam1/rotation": {
+      "tag": "/tf_static/oxts_pose_to_cam1/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam1/translation": {
+      "tag": "/tf_static/oxts_pose_to_cam1/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam2": {
+      "tag": "/tf_static/oxts_pose_to_cam2",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "oxts_pose",
+      "child-frame-id": "oxts_cam2",
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam2/rotation": {
+      "tag": "/tf_static/oxts_pose_to_cam2/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam2/translation": {
+      "tag": "/tf_static/oxts_pose_to_cam2/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam3": {
+      "tag": "/tf_static/oxts_pose_to_cam3",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "oxts_pose",
+      "child-frame-id": "oxts_cam3",
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam3/rotation": {
+      "tag": "/tf_static/oxts_pose_to_cam3/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_pose_to_cam3/translation": {
+      "tag": "/tf_static/oxts_pose_to_cam3/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_velo_to_sick": {
+      "tag": "/tf_static/oxts_velo_to_sick",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "oxts_velodyne",
+      "child-frame-id": "oxts_sick",
+      "label-tag": null
+    },
+    "/tf_static/oxts_velo_to_sick/rotation": {
+      "tag": "/tf_static/oxts_velo_to_sick/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/oxts_velo_to_sick/translation": {
+      "tag": "/tf_static/oxts_velo_to_sick/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam0": {
+      "tag": "/tf_static/pose_to_cam0",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "pose",
+      "child-frame-id": "cam0",
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam0/rotation": {
+      "tag": "/tf_static/pose_to_cam0/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam0/translation": {
+      "tag": "/tf_static/pose_to_cam0/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam1": {
+      "tag": "/tf_static/pose_to_cam1",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "pose",
+      "child-frame-id": "cam1",
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam1/rotation": {
+      "tag": "/tf_static/pose_to_cam1/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam1/translation": {
+      "tag": "/tf_static/pose_to_cam1/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam2": {
+      "tag": "/tf_static/pose_to_cam2",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "pose",
+      "child-frame-id": "cam2",
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam2/rotation": {
+      "tag": "/tf_static/pose_to_cam2/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam2/translation": {
+      "tag": "/tf_static/pose_to_cam2/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam3": {
+      "tag": "/tf_static/pose_to_cam3",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "pose",
+      "child-frame-id": "cam3",
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam3/rotation": {
+      "tag": "/tf_static/pose_to_cam3/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/pose_to_cam3/translation": {
+      "tag": "/tf_static/pose_to_cam3/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/velo_to_sick": {
+      "tag": "/tf_static/velo_to_sick",
+      "type": "pose",
+      "shape": null,
+      "frame-id": "velodyne",
+      "child-frame-id": "sick",
+      "label-tag": null
+    },
+    "/tf_static/velo_to_sick/rotation": {
+      "tag": "/tf_static/velo_to_sick/rotation",
+      "type": "quaternion",
+      "shape": [
+        4
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    },
+    "/tf_static/velo_to_sick/translation": {
+      "tag": "/tf_static/velo_to_sick/translation",
+      "type": "translation",
+      "shape": [
+        3
+      ],
+      "frame-id": null,
+      "child-frame-id": null,
+      "label-tag": null
+    }
+  },
+  "tf": {
+    "tree": {
+      "world": {
+        "oxts_pose": {
+          "oxts_cam0": {
+            "oxts_velodyne": {
+              "oxts_sick": {}
+            }
+          },
+          "oxts_cam1": {},
+          "oxts_cam2": {},
+          "oxts_cam3": {}
+        },
+        "pose": {
+          "cam0": {
+            "velodyne": {
+              "sick": {}
+            }
+          },
+          "cam1": {},
+          "cam2": {},
+          "cam3": {}
+        }
+      }
+    },
+    "list": [
+      "cam1",
+      "world",
+      "oxts_velodyne",
+      "cam3",
+      "cam2",
+      "sick",
+      "velodyne",
+      "oxts_cam1",
+      "oxts_sick",
+      "oxts_cam3",
+      "cam0",
+      "oxts_pose",
+      "oxts_cam2",
+      "pose",
+      "oxts_cam0"
+    ],
+    "data": {
+      "oxts_pose": {
+        "key": "oxts",
+        "frame-id": "world",
+        "child-frame-id": "oxts_pose"
+      },
+      "pose": {
+        "key": "world_to_pose",
+        "frame-id": "world",
+        "child-frame-id": "pose"
+      },
+      "velodyne": {
+        "key": "/tf_static/cam0_to_velo",
+        "frame-id": "cam0",
+        "child-frame-id": "velodyne"
+      },
+      "oxts_velodyne": {
+        "key": "/tf_static/oxts_cam0_to_velo",
+        "frame-id": "oxts_cam0",
+        "child-frame-id": "oxts_velodyne"
+      },
+      "oxts_cam0": {
+        "key": "/tf_static/oxts_pose_to_cam0",
+        "frame-id": "oxts_pose",
+        "child-frame-id": "oxts_cam0"
+      },
+      "oxts_cam1": {
+        "key": "/tf_static/oxts_pose_to_cam1",
+        "frame-id": "oxts_pose",
+        "child-frame-id": "oxts_cam1"
+      },
+      "oxts_cam2": {
+        "key": "/tf_static/oxts_pose_to_cam2",
+        "frame-id": "oxts_pose",
+        "child-frame-id": "oxts_cam2"
+      },
+      "oxts_cam3": {
+        "key": "/tf_static/oxts_pose_to_cam3",
+        "frame-id": "oxts_pose",
+        "child-frame-id": "oxts_cam3"
+      },
+      "oxts_sick": {
+        "key": "/tf_static/oxts_velo_to_sick",
+        "frame-id": "oxts_velodyne",
+        "child-frame-id": "oxts_sick"
+      },
+      "cam0": {
+        "key": "/tf_static/pose_to_cam0",
+        "frame-id": "pose",
+        "child-frame-id": "cam0"
+      },
+      "cam1": {
+        "key": "/tf_static/pose_to_cam1",
+        "frame-id": "pose",
+        "child-frame-id": "cam1"
+      },
+      "cam2": {
+        "key": "/tf_static/pose_to_cam2",
+        "frame-id": "pose",
+        "child-frame-id": "cam2"
+      },
+      "cam3": {
+        "key": "/tf_static/pose_to_cam3",
+        "frame-id": "pose",
+        "child-frame-id": "cam3"
+      },
+      "sick": {
+        "key": "/tf_static/velo_to_sick",
+        "frame-id": "velodyne",
+        "child-frame-id": "sick"
+      }
+    }
+  },
+  "label": {
+    "src": {
+      "kitti360": {
+        "0": {
+          "tag": "Void",
+          "color": [
+            0,
+            0,
+            0
+          ]
+        },
+        "1": {
+          "tag": "Ground",
+          "color": [
+            180,
+            130,
+            70
+          ]
+        },
+        "2": {
+          "tag": "Obstacle",
+          "color": [
+            70,
+            70,
+            70
+          ]
+        },
+        "3": {
+          "tag": "Vehicle",
+          "color": [
+            142,
+            0,
+            0
+          ]
+        },
+        "4": {
+          "tag": "Person",
+          "color": [
+            60,
+            20,
+            220
+          ]
+        }
+      }
+    },
+    "config": {
+      "5class": {
+        "src": "kitti360",
+        "convert": {
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "3": 0,
+          "4": 0
+        },
+        "dst": {
+          "0": {
+            "tag": "Dynamic",
+            "color": [
+              60,
+              20,
+              220
+            ]
+          },
+          "1": {
+            "tag": "Static",
+            "color": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  }
+}
