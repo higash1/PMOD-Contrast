@@ -482,11 +482,11 @@
 
 1. To run parallel training on other machines, specify the server with the "-H" option.
 
-<!-- ## Citation
+## References
 
-If you find this work useful in your research, please consider citing: -->
+If you find this work useful in your research, please consider referencing:
 
-<!-- ```bibtex
+```bibtex
 @article{pmodnet,
     author = {Junya Shikishima and Keisuke Urasaki and Tsuyoshi Tasaki},
     title = {PMOD-Net: point-cloud-map-based metric scale obstacle detection by using a monocular camera},
@@ -502,4 +502,4 @@ If you find this work useful in your research, please consider citing: -->
         https://doi.org/10.1080/01691864.2022.2153080
     }
 }
-``` -->
+```
